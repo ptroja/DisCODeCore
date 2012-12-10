@@ -1,0 +1,7 @@
+# Tracing options for the org.discode.task.diagram.sub plug-in
+
+# Common issues
+org.discode.task.diagram.sub/debug=false
+
+# Visual IDs
+org.discode.task.diagram.sub/debug/visualID=false

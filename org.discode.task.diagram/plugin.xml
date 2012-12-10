@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="componentmodel_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="componentmodel_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="componentmodel.diagram.part.ComponentModelDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ComponentmodelDiagramFile.gif"
+         extensions="componentmodel_diagram"
+         default="true"
+         class="componentmodel.diagram.part.ComponentModelDiagramEditor"
+         matchingStrategy="componentmodel.diagram.part.ComponentModelMatchingStrategy"
+         contributorClass="componentmodel.diagram.part.ComponentModelDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="componentmodel.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ComponentmodelDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="componentmodel.diagram.part.ComponentModelCreationWizard"
+  	     id="componentmodel.diagram.part.ComponentModelCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="org.discode.task.diagram.InitDiagram"
+            nameFilter="*.componentmodel"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="componentmodel.diagram.part.ComponentModelInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.discode.task.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ComponentModelPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="componentmodel.diagram.part.ComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ComponentModelPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="componentmodel.diagram.part.ComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ComponentModelRender">
+         <Priority name="Lowest"/>
+         <ViewId id="componentmodel.diagram.part.ComponentModelDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="componentmodel.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="org.discode.task.diagram.general"
+            name="%prefpage.org.discode.task.diagram.general"
+            class="componentmodel.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="org.discode.task.diagram.appearance"
+            name="%prefpage.org.discode.task.diagram.appearance"
+            category="org.discode.task.diagram.general"
+            class="componentmodel.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="org.discode.task.diagram.connections"
+            name="%prefpage.org.discode.task.diagram.connections"
+            category="org.discode.task.diagram.general"
+            class="componentmodel.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="org.discode.task.diagram.printing"
+            name="%prefpage.org.discode.task.diagram.printing"
+            category="org.discode.task.diagram.general"
+            class="componentmodel.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="org.discode.task.diagram.rulersAndGrid"
+            name="%prefpage.org.discode.task.diagram.rulersAndGrid"
+            category="org.discode.task.diagram.general"
+            class="componentmodel.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="org.discode.task.diagram"
+            labelProvider="componentmodel.diagram.sheet.ComponentModelSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="org.discode.task.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="org.discode.task.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="componentmodel.diagram.sheet.ComponentModelPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="componentmodel.diagram.providers.ComponentModelViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="ComponentModel"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,3001,3002,3003,3004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005,4002,4004"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="componentmodel.diagram.providers.ComponentModelEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="ComponentModel"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,3001,3002,3003,3004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4005,4002,4004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5005,5006,5003,5004,5007,5008"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="componentmodel.diagram.providers.ComponentModelModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="componentmodel.diagram.edit.parts.CompositeComponentEditPart" id="CompositeComponent_1000"/>
+         <object class="componentmodel.diagram.edit.parts.CompositeComponent2EditPart" id="CompositeComponent_2001"/>
+         <object class="componentmodel.diagram.edit.parts.PrimitiveComponentEditPart" id="PrimitiveComponent_2002"/>
+         <object class="componentmodel.diagram.edit.parts.OutPortEditPart" id="OutPort_2003"/>
+         <object class="componentmodel.diagram.edit.parts.InPortEditPart" id="InPort_2004"/>
+         <object class="componentmodel.diagram.edit.parts.InPort2EditPart" id="InPort_3001"/>
+         <object class="componentmodel.diagram.edit.parts.OutPort2EditPart" id="OutPort_3002"/>
+         <object class="componentmodel.diagram.edit.parts.InPort3EditPart" id="InPort_3003"/>
+         <object class="componentmodel.diagram.edit.parts.OutPort3EditPart" id="OutPort_3004"/>
+         <context elements="CompositeComponent_1000,CompositeComponent_2001,PrimitiveComponent_2002,OutPort_2003,InPort_2004,InPort_3001,OutPort_3002,InPort_3003,OutPort_3004"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="componentmodel.diagram.providers.ComponentModelIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="componentmodel.diagram.providers.ComponentModelParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <metamodelType
+               id="org.discode.task.diagram.CompositeComponent_1000"
+               name="%metatype.name.CompositeComponent_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeComponent"
+               edithelper="componentmodel.diagram.edit.helpers.CompositeComponentEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.CompositeComponent_2001"
+               name="%metatype.name.CompositeComponent_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.discode.task.diagram.CompositeComponent_1000"/>
+            <param name="semanticHint" value="2001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <metamodelType
+               id="org.discode.task.diagram.PrimitiveComponent_2002"
+               name="%metatype.name.PrimitiveComponent_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PrimitiveComponent"
+               edithelper="componentmodel.diagram.edit.helpers.PrimitiveComponentEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.OutPort_2003"
+               name="%metatype.name.OutPort_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.discode.task.diagram.OutPort_3002"/>
+            <param name="semanticHint" value="2003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.InPort_2004"
+               name="%metatype.name.InPort_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.discode.task.diagram.InPort_3001"/>
+            <param name="semanticHint" value="2004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <metamodelType
+               id="org.discode.task.diagram.InPort_3001"
+               name="%metatype.name.InPort_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="InPort"
+               edithelper="componentmodel.diagram.edit.helpers.InPortEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <metamodelType
+               id="org.discode.task.diagram.OutPort_3002"
+               name="%metatype.name.OutPort_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="OutPort"
+               edithelper="componentmodel.diagram.edit.helpers.OutPortEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.InPort_3003"
+               name="%metatype.name.InPort_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.discode.task.diagram.InPort_3001"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.OutPort_3004"
+               name="%metatype.name.OutPort_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.discode.task.diagram.OutPort_3002"/>
+            <param name="semanticHint" value="3004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.OutPortPropagatesTo_4005"
+               name="%metatype.name.OutPortPropagatesTo_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.InPortDelegatesTo_4002"
+               name="%metatype.name.InPortDelegatesTo_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://componentmodel/1.0">
+         <specializationType
+               id="org.discode.task.diagram.OutPortSink_4004"
+               name="%metatype.name.OutPortSink_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="org.discode.task.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.discode.task.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="org.discode.task.diagram.TypeContext">
+         <elementType ref="org.discode.task.diagram.CompositeComponent_1000"/>
+         <elementType ref="org.discode.task.diagram.CompositeComponent_2001"/>
+         <elementType ref="org.discode.task.diagram.PrimitiveComponent_2002"/>
+         <elementType ref="org.discode.task.diagram.OutPort_2003"/>
+         <elementType ref="org.discode.task.diagram.InPort_2004"/>
+         <elementType ref="org.discode.task.diagram.InPort_3001"/>
+         <elementType ref="org.discode.task.diagram.OutPort_3002"/>
+         <elementType ref="org.discode.task.diagram.InPort_3003"/>
+         <elementType ref="org.discode.task.diagram.OutPort_3004"/>
+         <elementType ref="org.discode.task.diagram.OutPortPropagatesTo_4005"/>
+         <elementType ref="org.discode.task.diagram.InPortDelegatesTo_4002"/>
+         <elementType ref="org.discode.task.diagram.OutPortSink_4004"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.discode.task.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="org.discode.task.diagram"
+           properties="isURIEditorInput"
+           class="componentmodel.diagram.part.ComponentModelUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="org.discode.task.diagram.resourceContent"/>
+			<contentExtension pattern="org.discode.task.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.discode.task.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="org.discode.task.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="org.discode.task.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="componentmodel.diagram.navigator.ComponentModelNavigatorContentProvider" 
+            labelProvider="componentmodel.diagram.navigator.ComponentModelNavigatorLabelProvider"
+            icon="icons/obj16/ComponentmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="componentmodel_diagram"/>
+               </and>
+               <instanceof value="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="org.discode.task.diagram.navigatorSorter" 
+               class="componentmodel.diagram.navigator.ComponentModelNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="componentmodel_diagram"/>
+                  </and>
+                  <instanceof value="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="org.discode.task.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="componentmodel.diagram.navigator.ComponentModelDomainNavigatorContentProvider" 
+            labelProvider="componentmodel.diagram.navigator.ComponentModelDomainNavigatorLabelProvider"
+            icon="icons/obj16/ComponentmodelDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="componentmodel"/>
+               </and>
+               <instanceof value="componentmodel.diagram.navigator.ComponentModelDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="componentmodel.diagram.navigator.ComponentModelDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="org.discode.task.diagram.navigatorActionProvider"
+            class="componentmodel.diagram.navigator.ComponentModelNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="org.discode.task.diagram.navigatorLinkHelper"
+            class="componentmodel.diagram.navigator.ComponentModelNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="org.discode.task.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="componentmodel.diagram.navigator.ComponentModelAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="componentmodel.diagram.part.ComponentModelDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="componentmodel.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="componentmodel.diagram.updateDiagram"
+         contextId="componentmodel.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="org.discode.task.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="componentmodel.diagram.part.ComponentModelDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="componentmodel.diagram.edit.parts.CompositeComponentEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="componentmodel.diagram.part.ComponentModelDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.discode.task.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="componentmodel.diagram.part.ComponentModelDiagramEditorID"
+         defaultHandler="componentmodel.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

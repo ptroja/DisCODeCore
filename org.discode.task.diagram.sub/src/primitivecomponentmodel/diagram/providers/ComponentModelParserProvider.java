@@ -31,73 +31,73 @@ public class ComponentModelParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser inPortName_5002Parser;
+	private IParser inPortName_5102Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getInPortName_5002Parser() {
-		if (inPortName_5002Parser == null) {
+	private IParser getInPortName_5102Parser() {
+		if (inPortName_5102Parser == null) {
 			EAttribute[] features = new EAttribute[] { ComponentmodelPackage.eINSTANCE
 					.getPort_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			inPortName_5002Parser = parser;
+			inPortName_5102Parser = parser;
 		}
-		return inPortName_5002Parser;
+		return inPortName_5102Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser outPortName_5003Parser;
+	private IParser outPortName_5103Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getOutPortName_5003Parser() {
-		if (outPortName_5003Parser == null) {
+	private IParser getOutPortName_5103Parser() {
+		if (outPortName_5103Parser == null) {
 			EAttribute[] features = new EAttribute[] { ComponentmodelPackage.eINSTANCE
 					.getPort_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			outPortName_5003Parser = parser;
+			outPortName_5103Parser = parser;
 		}
-		return outPortName_5003Parser;
+		return outPortName_5103Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser numericPropertyName_5004Parser;
+	private IParser numericPropertyName_5104Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNumericPropertyName_5004Parser() {
-		if (numericPropertyName_5004Parser == null) {
+	private IParser getNumericPropertyName_5104Parser() {
+		if (numericPropertyName_5104Parser == null) {
 			EAttribute[] features = new EAttribute[] { ComponentmodelPackage.eINSTANCE
 					.getProperty_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			numericPropertyName_5004Parser = parser;
+			numericPropertyName_5104Parser = parser;
 		}
-		return numericPropertyName_5004Parser;
+		return numericPropertyName_5104Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser enumPropertyName_5005Parser;
+	private IParser enumPropertyName_5105Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEnumPropertyName_5005Parser() {
-		if (enumPropertyName_5005Parser == null) {
+	private IParser getEnumPropertyName_5105Parser() {
+		if (enumPropertyName_5105Parser == null) {
 			EAttribute[] features = new EAttribute[] { ComponentmodelPackage.eINSTANCE
 					.getProperty_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			enumPropertyName_5005Parser = parser;
+			enumPropertyName_5105Parser = parser;
 		}
-		return enumPropertyName_5005Parser;
+		return enumPropertyName_5105Parser;
 	}
 
 	/**
@@ -106,13 +106,13 @@ public class ComponentModelParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case InPortNameEditPart.VISUAL_ID:
-			return getInPortName_5002Parser();
+			return getInPortName_5102Parser();
 		case OutPortNameEditPart.VISUAL_ID:
-			return getOutPortName_5003Parser();
+			return getOutPortName_5103Parser();
 		case NumericPropertyNameEditPart.VISUAL_ID:
-			return getNumericPropertyName_5004Parser();
+			return getNumericPropertyName_5104Parser();
 		case EnumPropertyNameEditPart.VISUAL_ID:
-			return getEnumPropertyName_5005Parser();
+			return getEnumPropertyName_5105Parser();
 		}
 		return null;
 	}

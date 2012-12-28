@@ -103,42 +103,42 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 	 */
 	public Image getImage(View view) {
 		switch (ComponentModelVisualIDRegistry.getVisualID(view)) {
-		case CompositeComponent2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?CompositeComponent", ComponentModelElementTypes.CompositeComponent_2001); //$NON-NLS-1$
-		case OutPortEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_2003); //$NON-NLS-1$
-		case InPort2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_3001); //$NON-NLS-1$
-		case OutPort2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_3002); //$NON-NLS-1$
-		case OutPortPropagatesToEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://componentmodel/1.0?OutPort?propagatesTo", ComponentModelElementTypes.OutPortPropagatesTo_4005); //$NON-NLS-1$
-		case InPort3EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_3003); //$NON-NLS-1$
-		case PrimitiveComponentEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?PrimitiveComponent", ComponentModelElementTypes.PrimitiveComponent_2002); //$NON-NLS-1$
-		case OutPort3EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_3004); //$NON-NLS-1$
-		case InPortEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_2004); //$NON-NLS-1$
 		case OutPortSinkEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://componentmodel/1.0?OutPort?sink", ComponentModelElementTypes.OutPortSink_4004); //$NON-NLS-1$
+		case OutPort2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_3002); //$NON-NLS-1$
+		case InPort2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_3001); //$NON-NLS-1$
+		case OutPortEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_2003); //$NON-NLS-1$
+		case PrimitiveComponentEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://componentmodel/1.0?PrimitiveComponent", ComponentModelElementTypes.PrimitiveComponent_2002); //$NON-NLS-1$
 		case InPortDelegatesToEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://componentmodel/1.0?InPort?delegatesTo", ComponentModelElementTypes.InPortDelegatesTo_4002); //$NON-NLS-1$
+		case InPort3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_3003); //$NON-NLS-1$
+		case InPortEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_2004); //$NON-NLS-1$
+		case OutPortPropagatesToEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://componentmodel/1.0?OutPort?propagatesTo", ComponentModelElementTypes.OutPortPropagatesTo_4005); //$NON-NLS-1$
+		case OutPort3EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_3004); //$NON-NLS-1$
 		case CompositeComponentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://componentmodel/1.0?CompositeComponent", ComponentModelElementTypes.CompositeComponent_1000); //$NON-NLS-1$
+		case CompositeComponent2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://componentmodel/1.0?CompositeComponent", ComponentModelElementTypes.CompositeComponent_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -191,30 +191,30 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ComponentModelVisualIDRegistry.getVisualID(view)) {
-		case CompositeComponent2EditPart.VISUAL_ID:
-			return getCompositeComponent_2001Text(view);
-		case OutPortEditPart.VISUAL_ID:
-			return getOutPort_2003Text(view);
-		case InPort2EditPart.VISUAL_ID:
-			return getInPort_3001Text(view);
-		case OutPort2EditPart.VISUAL_ID:
-			return getOutPort_3002Text(view);
-		case OutPortPropagatesToEditPart.VISUAL_ID:
-			return getOutPortPropagatesTo_4005Text(view);
-		case InPort3EditPart.VISUAL_ID:
-			return getInPort_3003Text(view);
-		case PrimitiveComponentEditPart.VISUAL_ID:
-			return getPrimitiveComponent_2002Text(view);
-		case OutPort3EditPart.VISUAL_ID:
-			return getOutPort_3004Text(view);
-		case InPortEditPart.VISUAL_ID:
-			return getInPort_2004Text(view);
 		case OutPortSinkEditPart.VISUAL_ID:
 			return getOutPortSink_4004Text(view);
+		case OutPort2EditPart.VISUAL_ID:
+			return getOutPort_3002Text(view);
+		case InPort2EditPart.VISUAL_ID:
+			return getInPort_3001Text(view);
+		case OutPortEditPart.VISUAL_ID:
+			return getOutPort_2003Text(view);
+		case PrimitiveComponentEditPart.VISUAL_ID:
+			return getPrimitiveComponent_2002Text(view);
 		case InPortDelegatesToEditPart.VISUAL_ID:
 			return getInPortDelegatesTo_4002Text(view);
+		case InPort3EditPart.VISUAL_ID:
+			return getInPort_3003Text(view);
+		case InPortEditPart.VISUAL_ID:
+			return getInPort_2004Text(view);
+		case OutPortPropagatesToEditPart.VISUAL_ID:
+			return getOutPortPropagatesTo_4005Text(view);
+		case OutPort3EditPart.VISUAL_ID:
+			return getOutPort_3004Text(view);
 		case CompositeComponentEditPart.VISUAL_ID:
 			return getCompositeComponent_1000Text(view);
+		case CompositeComponent2EditPart.VISUAL_ID:
+			return getCompositeComponent_2001Text(view);
 		}
 		return getUnknownElementText(view);
 	}

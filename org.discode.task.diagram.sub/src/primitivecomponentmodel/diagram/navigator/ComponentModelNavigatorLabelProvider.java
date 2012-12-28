@@ -97,16 +97,16 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 					"Navigator?Diagram?http://componentmodel/1.0?PrimitiveComponent", ComponentModelElementTypes.PrimitiveComponent_1000); //$NON-NLS-1$
 		case InPortEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_2001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://componentmodel/1.0?InPort", ComponentModelElementTypes.InPort_2101); //$NON-NLS-1$
 		case OutPortEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_2002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://componentmodel/1.0?OutPort", ComponentModelElementTypes.OutPort_2102); //$NON-NLS-1$
 		case NumericPropertyEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?NumericProperty", ComponentModelElementTypes.NumericProperty_2003); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://componentmodel/1.0?NumericProperty", ComponentModelElementTypes.NumericProperty_2103); //$NON-NLS-1$
 		case EnumPropertyEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://componentmodel/1.0?EnumProperty", ComponentModelElementTypes.EnumProperty_2004); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://componentmodel/1.0?EnumProperty", ComponentModelElementTypes.EnumProperty_2104); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -162,13 +162,13 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 		case PrimitiveComponentEditPart.VISUAL_ID:
 			return getPrimitiveComponent_1000Text(view);
 		case InPortEditPart.VISUAL_ID:
-			return getInPort_2001Text(view);
+			return getInPort_2101Text(view);
 		case OutPortEditPart.VISUAL_ID:
-			return getOutPort_2002Text(view);
+			return getOutPort_2102Text(view);
 		case NumericPropertyEditPart.VISUAL_ID:
-			return getNumericProperty_2003Text(view);
+			return getNumericProperty_2103Text(view);
 		case EnumPropertyEditPart.VISUAL_ID:
-			return getEnumProperty_2004Text(view);
+			return getEnumProperty_2104Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -191,9 +191,9 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getInPort_2001Text(View view) {
+	private String getInPort_2101Text(View view) {
 		IParser parser = ComponentModelParserProvider.getParser(
-				ComponentModelElementTypes.InPort_2001,
+				ComponentModelElementTypes.InPort_2101,
 				view.getElement() != null ? view.getElement() : view,
 				ComponentModelVisualIDRegistry
 						.getType(InPortNameEditPart.VISUAL_ID));
@@ -203,7 +203,7 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5002); //$NON-NLS-1$
+					"Parser was not found for label " + 5102); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -211,9 +211,9 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getOutPort_2002Text(View view) {
+	private String getOutPort_2102Text(View view) {
 		IParser parser = ComponentModelParserProvider.getParser(
-				ComponentModelElementTypes.OutPort_2002,
+				ComponentModelElementTypes.OutPort_2102,
 				view.getElement() != null ? view.getElement() : view,
 				ComponentModelVisualIDRegistry
 						.getType(OutPortNameEditPart.VISUAL_ID));
@@ -223,7 +223,7 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5003); //$NON-NLS-1$
+					"Parser was not found for label " + 5103); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -231,9 +231,9 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getNumericProperty_2003Text(View view) {
+	private String getNumericProperty_2103Text(View view) {
 		IParser parser = ComponentModelParserProvider.getParser(
-				ComponentModelElementTypes.NumericProperty_2003, view
+				ComponentModelElementTypes.NumericProperty_2103, view
 						.getElement() != null ? view.getElement() : view,
 				ComponentModelVisualIDRegistry
 						.getType(NumericPropertyNameEditPart.VISUAL_ID));
@@ -243,7 +243,7 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
+					"Parser was not found for label " + 5104); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -251,9 +251,9 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 	/**
 	 * @generated
 	 */
-	private String getEnumProperty_2004Text(View view) {
+	private String getEnumProperty_2104Text(View view) {
 		IParser parser = ComponentModelParserProvider.getParser(
-				ComponentModelElementTypes.EnumProperty_2004,
+				ComponentModelElementTypes.EnumProperty_2104,
 				view.getElement() != null ? view.getElement() : view,
 				ComponentModelVisualIDRegistry
 						.getType(EnumPropertyNameEditPart.VISUAL_ID));
@@ -263,7 +263,7 @@ public class ComponentModelNavigatorLabelProvider extends LabelProvider
 					ParserOptions.NONE.intValue());
 		} else {
 			ComponentModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5005); //$NON-NLS-1$
+					"Parser was not found for label " + 5105); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

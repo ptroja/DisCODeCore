@@ -93,13 +93,31 @@ public interface ComponentmodelPackage extends EPackage {
 	int COMPONENT__DESCRIPTION = 2;
 
 	/**
+	 * The feature id for the '<em><b>Author Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__AUTHOR_NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Author Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__AUTHOR_EMAIL = 4;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 3;
+	int COMPONENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link componentmodel.impl.PrimitiveComponentImpl <em>Primitive Component</em>}' class.
@@ -137,6 +155,24 @@ public interface ComponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRIMITIVE_COMPONENT__DESCRIPTION = COMPONENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Author Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_COMPONENT__AUTHOR_NAME = COMPONENT__AUTHOR_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Author Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_COMPONENT__AUTHOR_EMAIL = COMPONENT__AUTHOR_EMAIL;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -192,6 +228,24 @@ public interface ComponentmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_COMPONENT__DESCRIPTION = COMPONENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Author Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__AUTHOR_NAME = COMPONENT__AUTHOR_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Author Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__AUTHOR_EMAIL = COMPONENT__AUTHOR_EMAIL;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -622,6 +676,28 @@ public interface ComponentmodelPackage extends EPackage {
 	EAttribute getComponent_Description();
 
 	/**
+	 * Returns the meta object for the attribute '{@link componentmodel.Component#getAuthorName <em>Author Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author Name</em>'.
+	 * @see componentmodel.Component#getAuthorName()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_AuthorName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link componentmodel.Component#getAuthorEmail <em>Author Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author Email</em>'.
+	 * @see componentmodel.Component#getAuthorEmail()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EAttribute getComponent_AuthorEmail();
+
+	/**
 	 * Returns the meta object for class '{@link componentmodel.PrimitiveComponent <em>Primitive Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -954,6 +1030,22 @@ public interface ComponentmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPONENT__DESCRIPTION = eINSTANCE.getComponent_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Author Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__AUTHOR_NAME = eINSTANCE.getComponent_AuthorName();
+
+		/**
+		 * The meta object literal for the '<em><b>Author Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPONENT__AUTHOR_EMAIL = eINSTANCE.getComponent_AuthorEmail();
 
 		/**
 		 * The meta object literal for the '{@link componentmodel.impl.PrimitiveComponentImpl <em>Primitive Component</em>}' class.

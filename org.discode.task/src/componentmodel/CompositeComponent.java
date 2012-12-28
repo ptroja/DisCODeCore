@@ -32,7 +32,7 @@ public interface CompositeComponent extends Component {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see componentmodel.ComponentmodelPackage#getCompositeComponent_Components()
-	 * @model containment="true" keys="name"
+	 * @model containment="true" keys="name" required="true"
 	 * @generated
 	 */
 	EList<Component> getComponents();

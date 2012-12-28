@@ -229,31 +229,63 @@ public class ComponentModelNavigatorContentProvider implements
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (ComponentModelVisualIDRegistry.getVisualID(view)) {
 
-		case CompositeComponent2EditPart.VISUAL_ID: {
+		case OutPortSinkEditPart.VISUAL_ID: {
 			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
+			Edge sv = (Edge) view;
+			ComponentModelNavigatorGroup target = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_OutPortSink_4004_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ComponentModelNavigatorGroup source = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_OutPortSink_4004_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					ComponentModelVisualIDRegistry
 							.getType(InPort2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort3EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPortEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					ComponentModelVisualIDRegistry
 							.getType(OutPort2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPort3EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
 			return result.toArray();
 		}
 
-		case OutPortEditPart.VISUAL_ID: {
+		case OutPort2EditPart.VISUAL_ID: {
 			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPort_2003_incominglinks,
+					Messages.NavigatorGroupName_OutPort_3002_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPort_2003_outgoinglinks,
+					Messages.NavigatorGroupName_OutPort_3002_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -314,14 +346,14 @@ public class ComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case OutPort2EditPart.VISUAL_ID: {
+		case OutPortEditPart.VISUAL_ID: {
 			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPort_3002_incominglinks,
+					Messages.NavigatorGroupName_OutPort_2003_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPort_3002_outgoinglinks,
+					Messages.NavigatorGroupName_OutPort_2003_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -339,6 +371,140 @@ public class ComponentModelNavigatorContentProvider implements
 							.getType(OutPortSinkEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case PrimitiveComponentEditPart.VISUAL_ID: {
+			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPort3EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			return result.toArray();
+		}
+
+		case InPortDelegatesToEditPart.VISUAL_ID: {
+			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			ComponentModelNavigatorGroup target = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPortDelegatesTo_4002_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ComponentModelNavigatorGroup source = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPortDelegatesTo_4002_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort2EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort3EditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort2EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort3EditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case InPort3EditPart.VISUAL_ID: {
+			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPort_3003_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPort_3003_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortDelegatesToEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortDelegatesToEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPortSinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case InPortEditPart.VISUAL_ID: {
+			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPort_2004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
+					Messages.NavigatorGroupName_InPort_2004_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortDelegatesToEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPortDelegatesToEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPortSinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
 			}
@@ -397,57 +563,6 @@ public class ComponentModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case InPort3EditPart.VISUAL_ID: {
-			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPort_3003_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPort_3003_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortDelegatesToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortDelegatesToEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPortSinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case PrimitiveComponentEditPart.VISUAL_ID: {
-			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort3EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPort3EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			return result.toArray();
-		}
-
 		case OutPort3EditPart.VISUAL_ID: {
 			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -478,138 +593,6 @@ public class ComponentModelNavigatorContentProvider implements
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case InPortEditPart.VISUAL_ID: {
-			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			ComponentModelNavigatorGroup incominglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPort_2004_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ComponentModelNavigatorGroup outgoinglinks = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPort_2004_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortDelegatesToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortDelegatesToEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPortSinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case OutPortSinkEditPart.VISUAL_ID: {
-			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			ComponentModelNavigatorGroup target = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPortSink_4004_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ComponentModelNavigatorGroup source = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_OutPortSink_4004_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPortEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPort2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(OutPort3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case InPortDelegatesToEditPart.VISUAL_ID: {
-			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			ComponentModelNavigatorGroup target = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPortDelegatesTo_4002_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			ComponentModelNavigatorGroup source = new ComponentModelNavigatorGroup(
-					Messages.NavigatorGroupName_InPortDelegatesTo_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort2EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort3EditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPortEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort2EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					ComponentModelVisualIDRegistry
-							.getType(InPort3EditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -656,6 +639,23 @@ public class ComponentModelNavigatorContentProvider implements
 			if (!links.isEmpty()) {
 				result.add(links);
 			}
+			return result.toArray();
+		}
+
+		case CompositeComponent2EditPart.VISUAL_ID: {
+			LinkedList<ComponentModelAbstractNavigatorItem> result = new LinkedList<ComponentModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(InPort2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					ComponentModelVisualIDRegistry
+							.getType(OutPort2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			return result.toArray();
 		}
 		}

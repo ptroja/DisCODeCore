@@ -20,7 +20,7 @@ public class InPortItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public InPortItemSemanticEditPolicy() {
-		super(ComponentModelElementTypes.InPort_2001);
+		super(ComponentModelElementTypes.InPort_2101);
 	}
 
 	/**

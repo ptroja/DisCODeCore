@@ -55,24 +55,26 @@ public class ComponentModelElementTypes {
 	 * @generated
 	 */
 	public static final IElementType PrimitiveComponent_1000 = getElementType("org.discode.task.diagram.sub.PrimitiveComponent_1000"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType InPort_2001 = getElementType("org.discode.task.diagram.sub.InPort_2001"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType OutPort_2002 = getElementType("org.discode.task.diagram.sub.OutPort_2002"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType NumericProperty_2003 = getElementType("org.discode.task.diagram.sub.NumericProperty_2003"); //$NON-NLS-1$
+	public static final IElementType InPort_2101 = getElementType("org.discode.task.diagram.sub.InPort_2101"); //$NON-NLS-1$
 
 	/**
 	 * @generated
 	 */
-	public static final IElementType EnumProperty_2004 = getElementType("org.discode.task.diagram.sub.EnumProperty_2004"); //$NON-NLS-1$
+	public static final IElementType OutPort_2102 = getElementType("org.discode.task.diagram.sub.OutPort_2102"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType NumericProperty_2103 = getElementType("org.discode.task.diagram.sub.NumericProperty_2103"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType EnumProperty_2104 = getElementType("org.discode.task.diagram.sub.EnumProperty_2104"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -188,16 +190,16 @@ public class ComponentModelElementTypes {
 			elements.put(PrimitiveComponent_1000,
 					ComponentmodelPackage.eINSTANCE.getPrimitiveComponent());
 
-			elements.put(InPort_2001,
+			elements.put(InPort_2101,
 					ComponentmodelPackage.eINSTANCE.getInPort());
 
-			elements.put(OutPort_2002,
+			elements.put(OutPort_2102,
 					ComponentmodelPackage.eINSTANCE.getOutPort());
 
-			elements.put(NumericProperty_2003,
+			elements.put(NumericProperty_2103,
 					ComponentmodelPackage.eINSTANCE.getNumericProperty());
 
-			elements.put(EnumProperty_2004,
+			elements.put(EnumProperty_2104,
 					ComponentmodelPackage.eINSTANCE.getEnumProperty());
 		}
 		return (ENamedElement) elements.get(type);
@@ -217,10 +219,10 @@ public class ComponentModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(PrimitiveComponent_1000);
-			KNOWN_ELEMENT_TYPES.add(InPort_2001);
-			KNOWN_ELEMENT_TYPES.add(OutPort_2002);
-			KNOWN_ELEMENT_TYPES.add(NumericProperty_2003);
-			KNOWN_ELEMENT_TYPES.add(EnumProperty_2004);
+			KNOWN_ELEMENT_TYPES.add(InPort_2101);
+			KNOWN_ELEMENT_TYPES.add(OutPort_2102);
+			KNOWN_ELEMENT_TYPES.add(NumericProperty_2103);
+			KNOWN_ELEMENT_TYPES.add(EnumProperty_2104);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -233,13 +235,13 @@ public class ComponentModelElementTypes {
 		case PrimitiveComponentEditPart.VISUAL_ID:
 			return PrimitiveComponent_1000;
 		case InPortEditPart.VISUAL_ID:
-			return InPort_2001;
+			return InPort_2101;
 		case OutPortEditPart.VISUAL_ID:
-			return OutPort_2002;
+			return OutPort_2102;
 		case NumericPropertyEditPart.VISUAL_ID:
-			return NumericProperty_2003;
+			return NumericProperty_2103;
 		case EnumPropertyEditPart.VISUAL_ID:
-			return EnumProperty_2004;
+			return EnumProperty_2104;
 		}
 		return null;
 	}

@@ -149,13 +149,13 @@ public class CompositeComponent2EditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof InPort2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
-			
+
 			IFigure childFigure = ((InPort2EditPart) childEditPart).getFigure();
 			Rectangle childBounds = childFigure.getBounds();
 
 			locator.setBorderItemOffset(new Dimension(childBounds.width / 2,
 					childBounds.height / 2));
-			
+
 			getBorderedFigure().getBorderItemContainer().add(
 					((InPort2EditPart) childEditPart).getFigure(), locator);
 			return true;
@@ -163,13 +163,14 @@ public class CompositeComponent2EditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof OutPort2EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
-			
-			IFigure childFigure = ((OutPort2EditPart) childEditPart).getFigure();
+
+			IFigure childFigure = ((OutPort2EditPart) childEditPart)
+					.getFigure();
 			Rectangle childBounds = childFigure.getBounds();
 
 			locator.setBorderItemOffset(new Dimension(childBounds.width / 2,
 					childBounds.height / 2));
-			
+
 			getBorderedFigure().getBorderItemContainer().add(
 					((OutPort2EditPart) childEditPart).getFigure(), locator);
 			return true;

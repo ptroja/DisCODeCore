@@ -4,31 +4,31 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
-      visualID="2001"
+      visualID="2101"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'InPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'Component') and _containmentMF_.name = 'ports')">
     <nodeLabelTraces
-        visualID="5002"
+        visualID="5102"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2002"
+      visualID="2102"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'OutPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'Component') and _containmentMF_.name = 'ports')">
     <nodeLabelTraces
-        visualID="5003"
+        visualID="5103"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2003"
+      visualID="2103"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'NumericProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'PrimitiveComponent') and _containmentMF_.name = 'properties')">
     <nodeLabelTraces
-        visualID="5004"
+        visualID="5104"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2004"
+      visualID="2104"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'EnumProperty') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://componentmodel/1.0' and _eClass_.name = 'PrimitiveComponent') and _containmentMF_.name = 'properties')">
     <nodeLabelTraces
-        visualID="5005"
+        visualID="5105"
         queryText="true"/>
   </nodeTraces>
 </trace:TraceModel>

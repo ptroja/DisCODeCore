@@ -20,7 +20,7 @@ public class OutPortItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public OutPortItemSemanticEditPolicy() {
-		super(ComponentModelElementTypes.OutPort_2002);
+		super(ComponentModelElementTypes.OutPort_2102);
 	}
 
 	/**

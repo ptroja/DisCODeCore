@@ -581,6 +581,24 @@
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">
       <?gmfgen generated="true"?>
    </extension>
+   <extension
+         point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders">
+      <paletteProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider">
+         <Priority
+               name="Highest">
+         </Priority>
+      </paletteProvider>
+   </extension>
+   
+   <!-- gmf generator persistent region begin -->
+   <extension
+         point="org.eclipse.emf.transaction.editingDomains">
+      <editingDomain
+            factory="org.eclipse.emf.workspace.WorkspaceEditingDomainFactory"
+            id="org.discode.task.diagram.EditingDomain"/>
+   </extension>
+   <!-- gmf generator persistent region end -->
 
    <!-- optionally, specify keybindings -->
 </plugin>

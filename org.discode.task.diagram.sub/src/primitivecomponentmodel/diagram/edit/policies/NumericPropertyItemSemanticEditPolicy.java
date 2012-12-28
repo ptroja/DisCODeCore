@@ -20,7 +20,7 @@ public class NumericPropertyItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public NumericPropertyItemSemanticEditPolicy() {
-		super(ComponentModelElementTypes.NumericProperty_2003);
+		super(ComponentModelElementTypes.NumericProperty_2103);
 	}
 
 	/**

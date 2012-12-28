@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.RectangleFigure;
@@ -312,7 +313,7 @@ public class InPort2EditPart extends BorderedBorderItemEditPart {
 	/**
 	 * @generated
 	 */
-	public class InterfaceInPortFigure extends RectangleFigure {
+	public class InterfaceInPortFigure extends Ellipse {
 
 		/**
 		 * @generated
@@ -329,13 +330,13 @@ public class InPort2EditPart extends BorderedBorderItemEditPart {
 		 */
 		private void createContents() {
 
-			RectangleFigure rect0 = new RectangleFigure();
+			Ellipse elli0 = new Ellipse();
 
-			rect0.setBackgroundColor(ColorConstants.black);
-			rect0.setPreferredSize(new Dimension(getMapMode().DPtoLP(10),
+			elli0.setBackgroundColor(ColorConstants.black);
+			elli0.setPreferredSize(new Dimension(getMapMode().DPtoLP(10),
 					getMapMode().DPtoLP(10)));
 
-			this.add(rect0);
+			this.add(elli0);
 
 		}
 

@@ -32,6 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link componentmodel.impl.ComponentImpl#getPorts <em>Ports</em>}</li>
  *   <li>{@link componentmodel.impl.ComponentImpl#getName <em>Name</em>}</li>
  *   <li>{@link componentmodel.impl.ComponentImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link componentmodel.impl.ComponentImpl#getAuthorName <em>Author Name</em>}</li>
+ *   <li>{@link componentmodel.impl.ComponentImpl#getAuthorEmail <em>Author Email</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +89,46 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthorName() <em>Author Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHOR_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthorName() <em>Author Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authorName = AUTHOR_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthorEmail() <em>Author Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHOR_EMAIL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAuthorEmail() <em>Author Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authorEmail = AUTHOR_EMAIL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +208,48 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAuthorName() {
+		return authorName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuthorName(String newAuthorName) {
+		String oldAuthorName = authorName;
+		authorName = newAuthorName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentmodelPackage.COMPONENT__AUTHOR_NAME, oldAuthorName, authorName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAuthorEmail() {
+		return authorEmail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuthorEmail(String newAuthorEmail) {
+		String oldAuthorEmail = authorEmail;
+		authorEmail = newAuthorEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL, oldAuthorEmail, authorEmail));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -189,6 +273,10 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 				return getName();
 			case ComponentmodelPackage.COMPONENT__DESCRIPTION:
 				return getDescription();
+			case ComponentmodelPackage.COMPONENT__AUTHOR_NAME:
+				return getAuthorName();
+			case ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL:
+				return getAuthorEmail();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +300,12 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 			case ComponentmodelPackage.COMPONENT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case ComponentmodelPackage.COMPONENT__AUTHOR_NAME:
+				setAuthorName((String)newValue);
+				return;
+			case ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL:
+				setAuthorEmail((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -233,6 +327,12 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 			case ComponentmodelPackage.COMPONENT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case ComponentmodelPackage.COMPONENT__AUTHOR_NAME:
+				setAuthorName(AUTHOR_NAME_EDEFAULT);
+				return;
+			case ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL:
+				setAuthorEmail(AUTHOR_EMAIL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +351,10 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ComponentmodelPackage.COMPONENT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case ComponentmodelPackage.COMPONENT__AUTHOR_NAME:
+				return AUTHOR_NAME_EDEFAULT == null ? authorName != null : !AUTHOR_NAME_EDEFAULT.equals(authorName);
+			case ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL:
+				return AUTHOR_EMAIL_EDEFAULT == null ? authorEmail != null : !AUTHOR_EMAIL_EDEFAULT.equals(authorEmail);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -269,6 +373,10 @@ public abstract class ComponentImpl extends EObjectImpl implements Component {
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", authorName: ");
+		result.append(authorName);
+		result.append(", authorEmail: ");
+		result.append(authorEmail);
 		result.append(')');
 		return result.toString();
 	}

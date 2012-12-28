@@ -63,7 +63,7 @@ public class NumericPropertyEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2103;
 
 	/**
 	 * @generated

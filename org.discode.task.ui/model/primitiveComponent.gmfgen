@@ -14,6 +14,7 @@
       itemSemanticEditPolicyClassName="PrimitiveComponentItemSemanticEditPolicy"
       canonicalEditPolicyClassName="PrimitiveComponentCanonicalEditPolicy"
       iconProviderPriority="Low"
+      editingDomainID="org.discode.task.diagram.EditingDomain"
       validationProviderPriority="Low">
     <diagramRunTimeClass
         href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
@@ -26,7 +27,7 @@
     <domainDiagramElement
         href="../../org.discode.task/model/componentModel.genmodel#//componentmodel/PrimitiveComponent"/>
     <topLevelNodes
-        visualID="2001"
+        visualID="2101"
         editPartClassName="InPortEditPart"
         itemSemanticEditPolicyClassName="InPortItemSemanticEditPolicy"
         notationViewFactoryClassName="InPortViewFactory"
@@ -41,7 +42,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="InPortFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InPortFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InPortFigure() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout());&#xA;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(30)&#xA;, getMapMode().DPtoLP(30)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure rect0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#x9;rect0.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;rect0.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(15)&#xA;, getMapMode().DPtoLP(15)&#xA;));&#xA;&#xA;this.add(rect0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InPortFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InPortFigure() {&#xA;&#x9;&#x9;this.setLayoutManager(new org.eclipse.gmf.tooling.runtime.draw2d.CenterLayout());&#xA;&#x9;&#x9;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(30)&#xA;, getMapMode().DPtoLP(30)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.Ellipse elli0 = new org.eclipse.draw2d.Ellipse();&#xA;&#xA;&#x9;elli0.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;elli0.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(15)&#xA;, getMapMode().DPtoLP(15)&#xA;));&#xA;&#xA;this.add(elli0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:ResizeConstraints"/>
         <attributes
@@ -58,7 +59,7 @@
       </modelFacet>
       <labels
           xsi:type="gmfgen:GenExternalNodeLabel"
-          visualID="5002"
+          visualID="5102"
           editPartClassName="InPortNameEditPart"
           itemSemanticEditPolicyClassName="InPortNameItemSemanticEditPolicy"
           notationViewFactoryClassName="InPortNameViewFactory">
@@ -77,7 +78,7 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2002"
+        visualID="2102"
         editPartClassName="OutPortEditPart"
         itemSemanticEditPolicyClassName="OutPortItemSemanticEditPolicy"
         notationViewFactoryClassName="OutPortViewFactory"
@@ -92,7 +93,7 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="OutPortFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class OutPortFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public OutPortFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(30)&#xA;, getMapMode().DPtoLP(30)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class OutPortFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public OutPortFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(30)&#xA;, getMapMode().DPtoLP(30)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedBackground="true"/>
@@ -112,7 +113,7 @@
       </modelFacet>
       <labels
           xsi:type="gmfgen:GenExternalNodeLabel"
-          visualID="5003"
+          visualID="5103"
           editPartClassName="OutPortNameEditPart"
           itemSemanticEditPolicyClassName="OutPortNameItemSemanticEditPolicy"
           notationViewFactoryClassName="OutPortNameViewFactory">
@@ -131,7 +132,7 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2003"
+        visualID="2103"
         editPartClassName="NumericPropertyEditPart"
         itemSemanticEditPolicyClassName="NumericPropertyItemSemanticEditPolicy"
         notationViewFactoryClassName="NumericPropertyViewFactory"
@@ -166,7 +167,7 @@
       </modelFacet>
       <labels
           xsi:type="gmfgen:GenExternalNodeLabel"
-          visualID="5004"
+          visualID="5104"
           editPartClassName="NumericPropertyNameEditPart"
           itemSemanticEditPolicyClassName="NumericPropertyNameItemSemanticEditPolicy"
           notationViewFactoryClassName="NumericPropertyNameViewFactory">
@@ -185,7 +186,7 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2004"
+        visualID="2104"
         editPartClassName="EnumPropertyEditPart"
         itemSemanticEditPolicyClassName="EnumPropertyItemSemanticEditPolicy"
         notationViewFactoryClassName="EnumPropertyViewFactory"
@@ -220,7 +221,7 @@
       </modelFacet>
       <labels
           xsi:type="gmfgen:GenExternalNodeLabel"
-          visualID="5005"
+          visualID="5105"
           editPartClassName="EnumPropertyNameEditPart"
           itemSemanticEditPolicyClassName="EnumPropertyNameItemSemanticEditPolicy"
           notationViewFactoryClassName="EnumPropertyNameViewFactory">
@@ -265,26 +266,26 @@
     </palette>
     <preferencePages
         xsi:type="gmfgen:GenStandardPreferencePage"
-        iD="org.discode.task.diagram.general"
-        name="ComponentModel Diagram">
+        iD="org.discode.task.diagram.sub.general"
+        name="ComponentModel SubDiagram">
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="org.discode.task.diagram.appearance"
+          iD="org.discode.task.diagram.sub.appearance"
           name="Appearance"
           kind="Appearance"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="org.discode.task.diagram.connections"
+          iD="org.discode.task.diagram.sub.connections"
           name="Connections"
           kind="Connections"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="org.discode.task.diagram.printing"
+          iD="org.discode.task.diagram.sub.printing"
           name="Printing"
           kind="Printing"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="org.discode.task.diagram.rulersAndGrid"
+          iD="org.discode.task.diagram.sub.rulersAndGrid"
           name="Rulers And Grid"
           kind="RulersAndGrid"/>
     </preferencePages>
@@ -341,6 +342,11 @@
         xsi:type="gmfgen:PredefinedParser"
         uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet"/>
   </labelParsers>
+  <contextMenus
+      context="//@diagram">
+    <items
+        xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
   <contextMenus
       context="//@diagram">
     <items

@@ -1,121 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfgraph:Canvas
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition"
-    name="componentmodel">
-  <figures
-      name="Default">
-    <figures
-        xsi:type="gmfgraph:PolylineDecoration"
-        name="DataFlowTargetDecoration"/>
-    <descriptors
-        name="PrimitiveComponentFigure">
-      <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle">
-        <layout
-            xsi:type="gmfgraph:GridLayout"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="PrimitiveComponentLabelFigure">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              grabExcessHorizontalSpace="true"
-              grabExcessVerticalSpace="true"
-              verticalAlignment="BEGINNING"/>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="componentmodel">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="DataFlowTargetDecoration"/>
+    <descriptors name="PrimitiveComponentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle">
+        <layout xsi:type="gmfgraph:GridLayout"/>
+        <children xsi:type="gmfgraph:Label" name="PrimitiveComponentLabelFigure">
+          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" verticalAlignment="BEGINNING"/>
         </children>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors
-        name="CompositeComponentFigure">
-      <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="CompositeComponentFigure"
-          lineKind="LINE_DASH">
-        <layout
-            xsi:type="gmfgraph:GridLayout"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CompositeComponentLabelFigure">
-          <layoutData
-              xsi:type="gmfgraph:GridLayoutData"
-              grabExcessHorizontalSpace="true"
-              grabExcessVerticalSpace="true"
-              verticalAlignment="BEGINNING"/>
+    <descriptors name="CompositeComponentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="CompositeComponentFigure" lineKind="LINE_DASH">
+        <layout xsi:type="gmfgraph:GridLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CompositeComponentLabelFigure">
+          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true" verticalAlignment="BEGINNING"/>
         </children>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors
-        name="InterfaceInPortFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle">
-        <layout
-            xsi:type="gmfgraph:CenterLayout"/>
-        <preferredSize
-            dx="20"
-            dy="20"/>
-        <children
-            xsi:type="gmfgraph:Rectangle">
-          <backgroundColor
-              xsi:type="gmfgraph:ConstantColor"
-              value="black"/>
-          <preferredSize
-              dx="10"
-              dy="10"/>
+    <descriptors name="InterfaceInPortFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse">
+        <layout xsi:type="gmfgraph:CenterLayout"/>
+        <preferredSize dx="20" dy="20"/>
+        <children xsi:type="gmfgraph:Ellipse">
+          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+          <preferredSize dx="10" dy="10"/>
         </children>
       </actualFigure>
     </descriptors>
-    <descriptors
-        name="InterfaceOutPortFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="">
-        <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="black"/>
-        <preferredSize
-            dx="20"
-            dy="20"/>
+    <descriptors name="InterfaceOutPortFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse">
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <preferredSize dx="20" dy="20"/>
       </actualFigure>
     </descriptors>
-    <descriptors
-        name="DataFlowFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          targetDecoration="//@figures.0/@figures.0"/>
+    <descriptors name="DataFlowFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" targetDecoration="//@figures.0/@figures.0"/>
     </descriptors>
   </figures>
-  <nodes
-      name="PrimitiveComponent"
-      figure="PrimitiveComponentFigure"
-      affixedParentSide="NSEW"/>
-  <nodes
-      name="CompositeComponent"
-      figure="CompositeComponentFigure"/>
-  <nodes
-      name="InterfaceInPort"
-      figure="InterfaceInPortFigure"
-      affixedParentSide="WEST"/>
-  <nodes
-      name="InterfaceOutPort"
-      figure="InterfaceOutPortFigure"
-      affixedParentSide="EAST"/>
-  <connections
-      name="DataFlow"
-      figure="DataFlowFigure"/>
-  <labels
-      name="PrimitiveComponentDiagramLabel"
-      figure="PrimitiveComponentFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
-  <labels
-      name="CompositeComponentDiagramLabel"
-      figure="CompositeComponentFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <nodes name="PrimitiveComponent" figure="PrimitiveComponentFigure" affixedParentSide="NSEW"/>
+  <nodes name="CompositeComponent" figure="CompositeComponentFigure"/>
+  <nodes name="InterfaceInPort" figure="InterfaceInPortFigure" affixedParentSide="WEST"/>
+  <nodes name="InterfaceOutPort" figure="InterfaceOutPortFigure" affixedParentSide="EAST"/>
+  <connections name="DataFlow" figure="DataFlowFigure"/>
+  <labels name="PrimitiveComponentDiagramLabel" figure="PrimitiveComponentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="CompositeComponentDiagramLabel" figure="CompositeComponentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
 </gmfgraph:Canvas>

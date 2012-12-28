@@ -30,17 +30,17 @@ public class PrimitiveComponentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (ComponentModelElementTypes.InPort_2001 == req.getElementType()) {
+		if (ComponentModelElementTypes.InPort_2101 == req.getElementType()) {
 			return getGEFWrapper(new InPortCreateCommand(req));
 		}
-		if (ComponentModelElementTypes.OutPort_2002 == req.getElementType()) {
+		if (ComponentModelElementTypes.OutPort_2102 == req.getElementType()) {
 			return getGEFWrapper(new OutPortCreateCommand(req));
 		}
-		if (ComponentModelElementTypes.NumericProperty_2003 == req
+		if (ComponentModelElementTypes.NumericProperty_2103 == req
 				.getElementType()) {
 			return getGEFWrapper(new NumericPropertyCreateCommand(req));
 		}
-		if (ComponentModelElementTypes.EnumProperty_2004 == req
+		if (ComponentModelElementTypes.EnumProperty_2104 == req
 				.getElementType()) {
 			return getGEFWrapper(new EnumPropertyCreateCommand(req));
 		}

@@ -88,13 +88,13 @@ public class ComponentModelDiagramUpdater {
 		case PrimitiveComponentEditPart.VISUAL_ID:
 			return getPrimitiveComponent_1000ContainedLinks(view);
 		case InPortEditPart.VISUAL_ID:
-			return getInPort_2001ContainedLinks(view);
+			return getInPort_2101ContainedLinks(view);
 		case OutPortEditPart.VISUAL_ID:
-			return getOutPort_2002ContainedLinks(view);
+			return getOutPort_2102ContainedLinks(view);
 		case NumericPropertyEditPart.VISUAL_ID:
-			return getNumericProperty_2003ContainedLinks(view);
+			return getNumericProperty_2103ContainedLinks(view);
 		case EnumPropertyEditPart.VISUAL_ID:
-			return getEnumProperty_2004ContainedLinks(view);
+			return getEnumProperty_2104ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -105,13 +105,13 @@ public class ComponentModelDiagramUpdater {
 	public static List<ComponentModelLinkDescriptor> getIncomingLinks(View view) {
 		switch (ComponentModelVisualIDRegistry.getVisualID(view)) {
 		case InPortEditPart.VISUAL_ID:
-			return getInPort_2001IncomingLinks(view);
+			return getInPort_2101IncomingLinks(view);
 		case OutPortEditPart.VISUAL_ID:
-			return getOutPort_2002IncomingLinks(view);
+			return getOutPort_2102IncomingLinks(view);
 		case NumericPropertyEditPart.VISUAL_ID:
-			return getNumericProperty_2003IncomingLinks(view);
+			return getNumericProperty_2103IncomingLinks(view);
 		case EnumPropertyEditPart.VISUAL_ID:
-			return getEnumProperty_2004IncomingLinks(view);
+			return getEnumProperty_2104IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -122,13 +122,13 @@ public class ComponentModelDiagramUpdater {
 	public static List<ComponentModelLinkDescriptor> getOutgoingLinks(View view) {
 		switch (ComponentModelVisualIDRegistry.getVisualID(view)) {
 		case InPortEditPart.VISUAL_ID:
-			return getInPort_2001OutgoingLinks(view);
+			return getInPort_2101OutgoingLinks(view);
 		case OutPortEditPart.VISUAL_ID:
-			return getOutPort_2002OutgoingLinks(view);
+			return getOutPort_2102OutgoingLinks(view);
 		case NumericPropertyEditPart.VISUAL_ID:
-			return getNumericProperty_2003OutgoingLinks(view);
+			return getNumericProperty_2103OutgoingLinks(view);
 		case EnumPropertyEditPart.VISUAL_ID:
-			return getEnumProperty_2004OutgoingLinks(view);
+			return getEnumProperty_2104OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -144,7 +144,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getInPort_2001ContainedLinks(
+	public static List<ComponentModelLinkDescriptor> getInPort_2101ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -152,7 +152,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getOutPort_2002ContainedLinks(
+	public static List<ComponentModelLinkDescriptor> getOutPort_2102ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -160,7 +160,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getNumericProperty_2003ContainedLinks(
+	public static List<ComponentModelLinkDescriptor> getNumericProperty_2103ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -168,7 +168,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getEnumProperty_2004ContainedLinks(
+	public static List<ComponentModelLinkDescriptor> getEnumProperty_2104ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -176,7 +176,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getInPort_2001IncomingLinks(
+	public static List<ComponentModelLinkDescriptor> getInPort_2101IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -184,7 +184,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getOutPort_2002IncomingLinks(
+	public static List<ComponentModelLinkDescriptor> getOutPort_2102IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -192,7 +192,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getNumericProperty_2003IncomingLinks(
+	public static List<ComponentModelLinkDescriptor> getNumericProperty_2103IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -200,7 +200,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getEnumProperty_2004IncomingLinks(
+	public static List<ComponentModelLinkDescriptor> getEnumProperty_2104IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -208,7 +208,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getInPort_2001OutgoingLinks(
+	public static List<ComponentModelLinkDescriptor> getInPort_2101OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -216,7 +216,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getOutPort_2002OutgoingLinks(
+	public static List<ComponentModelLinkDescriptor> getOutPort_2102OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -224,7 +224,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getNumericProperty_2003OutgoingLinks(
+	public static List<ComponentModelLinkDescriptor> getNumericProperty_2103OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -232,7 +232,7 @@ public class ComponentModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<ComponentModelLinkDescriptor> getEnumProperty_2004OutgoingLinks(
+	public static List<ComponentModelLinkDescriptor> getEnumProperty_2104OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

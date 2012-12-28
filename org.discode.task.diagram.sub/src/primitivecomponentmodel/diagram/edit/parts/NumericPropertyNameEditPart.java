@@ -61,7 +61,7 @@ public class NumericPropertyNameEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5104;
 
 	/**
 	 * @generated
@@ -344,7 +344,7 @@ public class NumericPropertyNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = ComponentModelParserProvider
 					.getParser(
-							ComponentModelElementTypes.NumericProperty_2003,
+							ComponentModelElementTypes.NumericProperty_2103,
 							getParserElement(),
 							ComponentModelVisualIDRegistry
 									.getType(primitivecomponentmodel.diagram.edit.parts.NumericPropertyNameEditPart.VISUAL_ID));

@@ -61,7 +61,7 @@ public class EnumPropertyNameEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5005;
+	public static final int VISUAL_ID = 5105;
 
 	/**
 	 * @generated
@@ -344,7 +344,7 @@ public class EnumPropertyNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = ComponentModelParserProvider
 					.getParser(
-							ComponentModelElementTypes.EnumProperty_2004,
+							ComponentModelElementTypes.EnumProperty_2104,
 							getParserElement(),
 							ComponentModelVisualIDRegistry
 									.getType(primitivecomponentmodel.diagram.edit.parts.EnumPropertyNameEditPart.VISUAL_ID));

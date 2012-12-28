@@ -155,12 +155,21 @@ public class ComponentModelDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	private TransactionalEditingDomain createEditingDomain() {
-		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
-				.getInstance().createEditingDomain();
-		editingDomain.setID("org.discode.task.diagram.EditingDomain"); //$NON-NLS-1$
+		// Modification started
+		TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Registry.INSTANCE
+				.getEditingDomain("SharedEditingDomain"); //$NON-NLS-1$
+		if (editingDomain == null) {
+			editingDomain = DiagramEditingDomainFactory.getInstance()
+					.createEditingDomain();
+			editingDomain.setID("org.discode.task.diagram.EditingDomain"); //$NON-NLS-1$
+		}
+		// Continue with the original code.
+		//TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
+		//		.getInstance().createEditingDomain();
+		//editingDomain.setID("org.discode.task.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet())
 				.and(NotificationFilter.createEventTypeFilter(Notification.ADD))

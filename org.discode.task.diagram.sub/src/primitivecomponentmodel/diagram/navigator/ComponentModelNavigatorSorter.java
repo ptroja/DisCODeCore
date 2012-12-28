@@ -12,7 +12,7 @@ public class ComponentModelNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 2006;
+	private static final int GROUP_CATEGORY = 2106;
 
 	/**
 	 * @generated

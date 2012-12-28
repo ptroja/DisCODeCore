@@ -37,6 +37,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.discode.task;visibility:=reexport,
  org.discode.task.edit;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
- org.eclipse.gef;visibility:=reexport
+ org.eclipse.gef;visibility:=reexport,
+ org.eclipse.ui
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

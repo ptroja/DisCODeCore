@@ -65,6 +65,8 @@ public class ComponentItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addAuthorNamePropertyDescriptor(object);
+			addAuthorEmailPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,6 +107,50 @@ public class ComponentItemProvider
 				 getString("_UI_Component_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Component_description_feature", "_UI_Component_type"),
 				 ComponentmodelPackage.Literals.COMPONENT__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Author Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthorNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Component_authorName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Component_authorName_feature", "_UI_Component_type"),
+				 ComponentmodelPackage.Literals.COMPONENT__AUTHOR_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Author Email feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthorEmailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Component_authorEmail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Component_authorEmail_feature", "_UI_Component_type"),
+				 ComponentmodelPackage.Literals.COMPONENT__AUTHOR_EMAIL,
 				 true,
 				 false,
 				 false,
@@ -182,6 +228,8 @@ public class ComponentItemProvider
 		switch (notification.getFeatureID(Component.class)) {
 			case ComponentmodelPackage.COMPONENT__NAME:
 			case ComponentmodelPackage.COMPONENT__DESCRIPTION:
+			case ComponentmodelPackage.COMPONENT__AUTHOR_NAME:
+			case ComponentmodelPackage.COMPONENT__AUTHOR_EMAIL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ComponentmodelPackage.COMPONENT__PORTS:

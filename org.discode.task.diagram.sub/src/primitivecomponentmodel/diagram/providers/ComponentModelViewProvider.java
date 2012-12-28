@@ -218,16 +218,16 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 		}
 		switch (visualID) {
 		case InPortEditPart.VISUAL_ID:
-			return createInPort_2001(domainElement, containerView, index,
+			return createInPort_2101(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case OutPortEditPart.VISUAL_ID:
-			return createOutPort_2002(domainElement, containerView, index,
+			return createOutPort_2102(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case NumericPropertyEditPart.VISUAL_ID:
-			return createNumericProperty_2003(domainElement, containerView,
+			return createNumericProperty_2103(domainElement, containerView,
 					index, persisted, preferencesHint);
 		case EnumPropertyEditPart.VISUAL_ID:
-			return createEnumProperty_2004(domainElement, containerView, index,
+			return createEnumProperty_2104(domainElement, containerView, index,
 					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
@@ -251,7 +251,7 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createInPort_2001(EObject domainElement, View containerView,
+	public Node createInPort_2101(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -288,21 +288,21 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node,
+		Node label5102 = createLabel(node,
 				ComponentModelVisualIDRegistry
 						.getType(InPortNameEditPart.VISUAL_ID));
-		label5002.setLayoutConstraint(NotationFactory.eINSTANCE
+		label5102.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location5002 = (Location) label5002.getLayoutConstraint();
-		location5002.setX(0);
-		location5002.setY(5);
+		Location location5102 = (Location) label5102.getLayoutConstraint();
+		location5102.setX(0);
+		location5102.setY(5);
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createOutPort_2002(EObject domainElement, View containerView,
+	public Node createOutPort_2102(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles()
@@ -338,21 +338,21 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5003 = createLabel(node,
+		Node label5103 = createLabel(node,
 				ComponentModelVisualIDRegistry
 						.getType(OutPortNameEditPart.VISUAL_ID));
-		label5003.setLayoutConstraint(NotationFactory.eINSTANCE
+		label5103.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location5003 = (Location) label5003.getLayoutConstraint();
-		location5003.setX(0);
-		location5003.setY(5);
+		Location location5103 = (Location) label5103.getLayoutConstraint();
+		location5103.setX(0);
+		location5103.setY(5);
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createNumericProperty_2003(EObject domainElement,
+	public Node createNumericProperty_2103(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -389,21 +389,21 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5004 = createLabel(node,
+		Node label5104 = createLabel(node,
 				ComponentModelVisualIDRegistry
 						.getType(NumericPropertyNameEditPart.VISUAL_ID));
-		label5004.setLayoutConstraint(NotationFactory.eINSTANCE
+		label5104.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location5004 = (Location) label5004.getLayoutConstraint();
-		location5004.setX(0);
-		location5004.setY(5);
+		Location location5104 = (Location) label5104.getLayoutConstraint();
+		location5104.setX(0);
+		location5104.setY(5);
 		return node;
 	}
 
 	/**
 	 * @generated
 	 */
-	public Node createEnumProperty_2004(EObject domainElement,
+	public Node createEnumProperty_2104(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -440,14 +440,14 @@ public class ComponentModelViewProvider extends AbstractProvider implements
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
 					.intValue());
 		}
-		Node label5005 = createLabel(node,
+		Node label5105 = createLabel(node,
 				ComponentModelVisualIDRegistry
 						.getType(EnumPropertyNameEditPart.VISUAL_ID));
-		label5005.setLayoutConstraint(NotationFactory.eINSTANCE
+		label5105.setLayoutConstraint(NotationFactory.eINSTANCE
 				.createLocation());
-		Location location5005 = (Location) label5005.getLayoutConstraint();
-		location5005.setX(0);
-		location5005.setY(5);
+		Location location5105 = (Location) label5105.getLayoutConstraint();
+		location5105.setX(0);
+		location5105.setY(5);
 		return node;
 	}
 

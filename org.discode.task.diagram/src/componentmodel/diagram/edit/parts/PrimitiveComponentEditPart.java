@@ -130,13 +130,13 @@ public class PrimitiveComponentEditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof InPort3EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.WEST);
-			
+
 			IFigure childFigure = ((InPort3EditPart) childEditPart).getFigure();
 			Rectangle childBounds = childFigure.getBounds();
 
 			locator.setBorderItemOffset(new Dimension(childBounds.width / 2,
 					childBounds.height / 2));
-			
+
 			getBorderedFigure().getBorderItemContainer().add(
 					((InPort3EditPart) childEditPart).getFigure(), locator);
 			return true;
@@ -144,13 +144,14 @@ public class PrimitiveComponentEditPart extends AbstractBorderedShapeEditPart {
 		if (childEditPart instanceof OutPort3EditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
 					PositionConstants.EAST);
-			
-			IFigure childFigure = ((OutPort3EditPart) childEditPart).getFigure();
+
+			IFigure childFigure = ((OutPort3EditPart) childEditPart)
+					.getFigure();
 			Rectangle childBounds = childFigure.getBounds();
 
 			locator.setBorderItemOffset(new Dimension(childBounds.width / 2,
 					childBounds.height / 2));
-			
+
 			getBorderedFigure().getBorderItemContainer().add(
 					((OutPort3EditPart) childEditPart).getFigure(), locator);
 			return true;

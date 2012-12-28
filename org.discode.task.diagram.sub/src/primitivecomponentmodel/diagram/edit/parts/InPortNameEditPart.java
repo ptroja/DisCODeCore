@@ -61,7 +61,7 @@ public class InPortNameEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5002;
+	public static final int VISUAL_ID = 5102;
 
 	/**
 	 * @generated
@@ -344,7 +344,7 @@ public class InPortNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = ComponentModelParserProvider
 					.getParser(
-							ComponentModelElementTypes.InPort_2001,
+							ComponentModelElementTypes.InPort_2101,
 							getParserElement(),
 							ComponentModelVisualIDRegistry
 									.getType(primitivecomponentmodel.diagram.edit.parts.InPortNameEditPart.VISUAL_ID));

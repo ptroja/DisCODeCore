@@ -47,10 +47,10 @@ public class ComponentModelPaletteFactory {
 				Messages.InPort1CreationTool_title,
 				Messages.InPort1CreationTool_desc,
 				Collections
-						.singletonList(ComponentModelElementTypes.InPort_2001));
+						.singletonList(ComponentModelElementTypes.InPort_2101));
 		entry.setId("createInPort1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ComponentModelElementTypes
-				.getImageDescriptor(ComponentModelElementTypes.InPort_2001));
+				.getImageDescriptor(ComponentModelElementTypes.InPort_2101));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -63,10 +63,10 @@ public class ComponentModelPaletteFactory {
 				Messages.OutPort2CreationTool_title,
 				Messages.OutPort2CreationTool_desc,
 				Collections
-						.singletonList(ComponentModelElementTypes.OutPort_2002));
+						.singletonList(ComponentModelElementTypes.OutPort_2102));
 		entry.setId("createOutPort2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ComponentModelElementTypes
-				.getImageDescriptor(ComponentModelElementTypes.OutPort_2002));
+				.getImageDescriptor(ComponentModelElementTypes.OutPort_2102));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -79,10 +79,10 @@ public class ComponentModelPaletteFactory {
 				Messages.NumericProperty3CreationTool_title,
 				Messages.NumericProperty3CreationTool_desc,
 				Collections
-						.singletonList(ComponentModelElementTypes.NumericProperty_2003));
+						.singletonList(ComponentModelElementTypes.NumericProperty_2103));
 		entry.setId("createNumericProperty3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ComponentModelElementTypes
-				.getImageDescriptor(ComponentModelElementTypes.NumericProperty_2003));
+				.getImageDescriptor(ComponentModelElementTypes.NumericProperty_2103));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -95,10 +95,10 @@ public class ComponentModelPaletteFactory {
 				Messages.EnumProperty4CreationTool_title,
 				Messages.EnumProperty4CreationTool_desc,
 				Collections
-						.singletonList(ComponentModelElementTypes.EnumProperty_2004));
+						.singletonList(ComponentModelElementTypes.EnumProperty_2104));
 		entry.setId("createEnumProperty4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(ComponentModelElementTypes
-				.getImageDescriptor(ComponentModelElementTypes.EnumProperty_2004));
+				.getImageDescriptor(ComponentModelElementTypes.EnumProperty_2104));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

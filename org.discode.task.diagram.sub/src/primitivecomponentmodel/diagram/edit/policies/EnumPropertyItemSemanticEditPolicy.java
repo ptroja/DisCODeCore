@@ -20,7 +20,7 @@ public class EnumPropertyItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EnumPropertyItemSemanticEditPolicy() {
-		super(ComponentModelElementTypes.EnumProperty_2004);
+		super(ComponentModelElementTypes.EnumProperty_2104);
 	}
 
 	/**

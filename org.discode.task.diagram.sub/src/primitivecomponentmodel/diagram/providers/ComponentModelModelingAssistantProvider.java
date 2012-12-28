@@ -39,10 +39,10 @@ public class ComponentModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof PrimitiveComponentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-			types.add(ComponentModelElementTypes.InPort_2001);
-			types.add(ComponentModelElementTypes.OutPort_2002);
-			types.add(ComponentModelElementTypes.NumericProperty_2003);
-			types.add(ComponentModelElementTypes.EnumProperty_2004);
+			types.add(ComponentModelElementTypes.InPort_2101);
+			types.add(ComponentModelElementTypes.OutPort_2102);
+			types.add(ComponentModelElementTypes.NumericProperty_2103);
+			types.add(ComponentModelElementTypes.EnumProperty_2104);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

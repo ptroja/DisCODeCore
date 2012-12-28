@@ -22,7 +22,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_3bFrUT8oEeKTAuMQHYOvDQ" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="componentModel.ecore#//Component"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3bFrUj8oEeKTAuMQHYOvDQ" x="288" y="48" width="193" height="73"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3bFrUj8oEeKTAuMQHYOvDQ" x="288" y="14" width="193" height="107"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_4YdSgD8oEeKTAuMQHYOvDQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_4YfHsD8oEeKTAuMQHYOvDQ" type="4001"/>

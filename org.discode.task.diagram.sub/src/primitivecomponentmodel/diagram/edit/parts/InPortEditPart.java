@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.draw2d.ColorConstants;
+import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.RectangleFigure;
@@ -62,7 +63,7 @@ public class InPortEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 2101;
 
 	/**
 	 * @generated
@@ -265,7 +266,7 @@ public class InPortEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public class InPortFigure extends RectangleFigure {
+	public class InPortFigure extends Ellipse {
 
 		/**
 		 * @generated
@@ -282,13 +283,13 @@ public class InPortEditPart extends AbstractBorderedShapeEditPart {
 		 */
 		private void createContents() {
 
-			RectangleFigure rect0 = new RectangleFigure();
+			Ellipse elli0 = new Ellipse();
 
-			rect0.setBackgroundColor(ColorConstants.black);
-			rect0.setPreferredSize(new Dimension(getMapMode().DPtoLP(15),
+			elli0.setBackgroundColor(ColorConstants.black);
+			elli0.setPreferredSize(new Dimension(getMapMode().DPtoLP(15),
 					getMapMode().DPtoLP(15)));
 
-			this.add(rect0);
+			this.add(elli0);
 
 		}
 

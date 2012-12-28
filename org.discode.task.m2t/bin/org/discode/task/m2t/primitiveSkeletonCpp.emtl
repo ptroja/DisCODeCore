@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="primitiveSkeletonCpp" nsURI="org::discode::task::m2t::primitiveSkeletonCpp" startHeaderPosition="29" endHeaderPosition="269">
+    <input>
+      <takesTypesFrom href="http://componentmodel/1.0#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/*!&#xA; * \file "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".cpp&#xA; * \brief&#xA; * \author "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/authorName"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/authorEmail"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA; */&#xA;&#xA;#include &lt;memory>&#xA;#include &lt;string>&#xA;&#xA;#include &quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".hpp&quot;&#xA;#include &quot;Common/Logger.hpp&quot;&#xA;#include &quot;Types/MatrixTranslator.hpp&quot;&#xA;&#xA;#include &lt;boost/bind.hpp>&#xA;&#xA;namespace Processors {&#xA;namespace "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="::"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(const std::string &amp; name) :&#xA;&#x9;&#x9;Base::Component(name)  {&#xA;}&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="::~"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {&#xA;}&#xA;&#xA;void Calib::prepareInterface() {&#xA;&#x9;// Register data streams&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;registerStream(&quot;in_"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/@body.1/@body.19/p">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Port/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, &amp;in_"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/@body.1/@body.19/p">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Port/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/17/Sequence(InPort)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Port)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+                <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://componentmodel/1.0#//Component/ports"/>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp" eType="/17/Sequence(InPort)" referredOperation="/1/EObject_Class/eContents">
+              <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/@body.1/@body.19/collect/temp1">
+                <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//Port"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/18/InPort">
+                <referredType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+              </argument>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//Port"/>
+            </iterator>
+          </iterSet>
+          <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </each>
+        </body>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;registerStream(&quot;out_"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/@body.1/@body.20/p">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Port/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, &amp;out_"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/@body.1/@body.20/p">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Port/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/17/Sequence(OutPort)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Port)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+                <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://componentmodel/1.0#//Component/ports"/>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp" eType="/17/Sequence(OutPort)" referredOperation="/1/EObject_Class/eContents">
+              <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/@body.1/@body.20/collect/temp2">
+                <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//Port"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/18/OutPort">
+                <referredType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+              </argument>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//Port"/>
+            </iterator>
+          </iterSet>
+          <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </each>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;// Register handlers.&#xA;&#x9;/* TODO: not implemented yet.&#xA;&#x9;h_process_chessboard.setup(boost::bind(&amp;Calib::process_chessboard, this));&#xA;&#x9;registerHandler(&quot;process_chessboard&quot;, &amp;h_process_chessboard);&#xA;&#x9;addDependency(&quot;process_chessboard&quot;, &amp;in_chessboard);&#xA;&#x9;addDependency(&quot;process_chessboard&quot;, &amp;in_camerainfo);&#xA;&#x9;*/&#xA;&#xA;&#x9;// Register handlers responsible for&#xA;&#x9;h_perform_calibration.setup(boost::bind(&amp;Calib::perform_calibration, this));&#xA;&#x9;registerHandler(&quot;perform_calibration&quot;, &amp;h_perform_calibration);&#xA;}&#xA;&#xA;bool Calib::onInit() {&#xA;&#xA;&#x9;return true;&#xA;}&#xA;&#xA;bool Calib::onFinish() {&#xA;&#x9;return true;&#xA;}&#xA;&#xA;bool Calib::onStop() {&#xA;&#x9;return true;&#xA;}&#xA;&#xA;bool Calib::onStart() {&#xA;&#x9;return true;&#xA;}&#xA;&#xA;/*&#xA;void Calib::process_chessboard() {&#xA;&#x9;// Retrieve chessboard from the inputstream.&#xA;&#x9;Types::Objects3D::Chessboard chessboard = in_chessboard.read();&#xA;    Types::CameraInfo camera_info = in_camerainfo.read();&#xA;&#xA;    imageSize = camera_info.size();&#xA;&#xA;&#x9;// Add image points.&#xA;    imagePoints.push_back(chessboard.getImagePoints());&#xA;&#xA;    // Add object points.&#xA;    objectPoints.push_back(chessboard.getModelPoints());&#xA;&#xA;    CLOG(LINFO) &lt;&lt; &quot;Registered new set of points&quot;;&#xA;}&#xA;&#xA;&#xA;void Calib::perform_calibration()&#xA;{&#xA;    LOG(LINFO) &lt;&lt; &quot;Calib::perform_calibration()&quot;;&#xA;&#xA;    // The 3x3 camera matrix containing focal lengths fx,fy and displacement of the center of coordinates cx,cy.&#xA;    cv::Mat cameraMatrix = cv::Mat::eye(3, 3, CV_32F);&#xA;    // Set two focal lengths in intrinsic matrix to have a ratio of 1.&#xA;    cameraMatrix.at&lt;double>(0,0) = 1.0f;&#xA;    cameraMatrix.at&lt;double>(1,1) = 1.0f;&#xA;&#xA;    // Vector with distortion coefficients k_1, k_2, p_1, p_2, k_3.&#xA;    cv::Mat distCoeffs = cv::Mat::zeros(8, 1, CV_32F);&#xA;&#xA;    // The output vector of rotation vectors.&#xA;    vector&lt;cv::Mat> rvecs;&#xA;    // The output vector of translation vectors.&#xA;    vector&lt;cv::Mat> tvecs;&#xA;&#xA;    // Calibrate camera.&#xA;    double errors = cv::calibrateCamera(objectPoints, imagePoints, imageSize, cameraMatrix, distCoeffs, rvecs, tvecs);&#xA;&#xA;    //double calibrateCamera(InputArrayOfArrays objectPoints, InputArrayOfArrays imagePoints, Size imageSize, InputOutputArray cameraMatrix, InputOutputArray distCoeffs, OutputArrayOfArrays rvecs, OutputArrayOfArrays tvecs, int flags=0, TermCriteria criteria=TermCriteria( TermCriteria::COUNT+TermCriteria::EPS, 30, DBL_EPSILON) )&#xA;&#xA;    LOG(LNOTICE) &lt;&lt; &quot;Calibration ended with reprojection error =&quot; &lt;&lt; errors;&#xA;    LOG(LNOTICE) &lt;&lt; &quot;Camera matrix: &quot; &lt;&lt; cameraMatrix;&#xA;    LOG(LNOTICE) &lt;&lt; &quot;Distortion coefficients: &quot; &lt;&lt; distCoeffs;&#xA;&#xA;    Types::CameraInfo camera_info;&#xA;    camera_info.setSize(imageSize);&#xA;    camera_info.setCameraMatrix(cameraMatrix);&#xA;    camera_info.setDistCoeffs(distCoeffs);&#xA;&#xA;    out_camerainfo.write(camera_info);&#xA;&#xA;    // Save calibration parameters.&#xA;    //saveParameters(cameraMatrix, distCoeffs);&#xA;}&#xA;*/&#xA;&#xA;} //: namespace "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+            <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;} //: namespace Processors&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aPrimitiveComponent" referredVariable="/0/generateElement/aPrimitiveComponent">
+              <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://componentmodel/1.0#//Component/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".cpp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aPrimitiveComponent">
+        <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContents">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aPrimitiveComponent">
+          <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveComponent_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://componentmodel/1.0#//PrimitiveComponent"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Port)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(InPort)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OutPort)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="InPort">
+      <referredType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="OutPort">
+      <referredType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//InPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//OutPort"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://componentmodel/1.0#//PrimitiveComponent"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="89"/>
+      <details key="end" value="3987"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/@body.0">
+      <details key="start" value="165"/>
+      <details key="end" value="166"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/@body.1">
+      <details key="start" value="166"/>
+      <details key="end" value="3975"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/@body.1/@body.0">
+      <details key="start" value="231"/>
+      <details key="end" value="244"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/@body.1/@body.1">
+      <details key="start" value="245"/>
+      <details key="end" value="269"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/@body.1/@body.1/aPrimitiveComponent">
+      <details key="start" value="245"/>
+      <details key="end" value="264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/@body.1/@body.2">
+      <details key="start" value="271"/>
+      <details key="end" value="297"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/@body.1/@body.3">
+      <details key="start" value="298"/>
+      <details key="end" value="328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/@body.1/@body.3/aPrimitiveComponent">
+      <details key="start" value="298"/>
+      <details key="end" value="317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/@body.1/@body.4">
+      <details key="start" value="330"/>
+      <details key="end" value="331"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/@body.1/@body.5">
+      <details key="start" value="332"/>
+      <details key="end" value="363"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/@body.1/@body.5/aPrimitiveComponent">
+      <details key="start" value="332"/>
+      <details key="end" value="351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/@body.1/@body.6">
+      <details key="start" value="365"/>
+      <details key="end" value="418"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/@body.1/@body.7">
+      <details key="start" value="419"/>
+      <details key="end" value="443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/@body.1/@body.7/aPrimitiveComponent">
+      <details key="start" value="419"/>
+      <details key="end" value="438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/@body.1/@body.8">
+      <details key="start" value="445"/>
+      <details key="end" value="579"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/@body.1/@body.9">
+      <details key="start" value="580"/>
+      <details key="end" value="604"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/@body.1/@body.9/aPrimitiveComponent">
+      <details key="start" value="580"/>
+      <details key="end" value="599"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/@body.1/@body.10">
+      <details key="start" value="606"/>
+      <details key="end" value="610"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/@body.1/@body.11">
+      <details key="start" value="611"/>
+      <details key="end" value="635"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/@body.1/@body.11/aPrimitiveComponent">
+      <details key="start" value="611"/>
+      <details key="end" value="630"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/@body.1/@body.12">
+      <details key="start" value="637"/>
+      <details key="end" value="639"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/@body.1/@body.13">
+      <details key="start" value="640"/>
+      <details key="end" value="664"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/@body.1/@body.13/aPrimitiveComponent">
+      <details key="start" value="640"/>
+      <details key="end" value="659"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/@body.1/@body.14">
+      <details key="start" value="666"/>
+      <details key="end" value="725"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/@body.1/@body.15">
+      <details key="start" value="726"/>
+      <details key="end" value="750"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/@body.1/@body.15/aPrimitiveComponent">
+      <details key="start" value="726"/>
+      <details key="end" value="745"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/@body.1/@body.16">
+      <details key="start" value="752"/>
+      <details key="end" value="755"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/@body.1/@body.17">
+      <details key="start" value="756"/>
+      <details key="end" value="780"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/@body.1/@body.17/aPrimitiveComponent">
+      <details key="start" value="756"/>
+      <details key="end" value="775"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/@body.1/@body.18">
+      <details key="start" value="782"/>
+      <details key="end" value="849"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/@body.1/@body.19">
+      <details key="start" value="850"/>
+      <details key="end" value="987"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/@body.1/@body.19/@body.0">
+      <details key="start" value="932"/>
+      <details key="end" value="952"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/@body.1/@body.19/@body.1">
+      <details key="start" value="953"/>
+      <details key="end" value="959"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/@body.1/@body.19/@body.1/p">
+      <details key="start" value="953"/>
+      <details key="end" value="954"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/@body.1/@body.19/@body.2">
+      <details key="start" value="961"/>
+      <details key="end" value="968"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/@body.1/@body.19/@body.3">
+      <details key="start" value="969"/>
+      <details key="end" value="975"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/@body.1/@body.19/@body.3/p">
+      <details key="start" value="969"/>
+      <details key="end" value="970"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/@body.1/@body.19/@body.4">
+      <details key="start" value="977"/>
+      <details key="end" value="980"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/@body.1/@body.19/p">
+      <details key="start" value="856"/>
+      <details key="end" value="866"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateElement/@body.1/@body.19/collect">
+      <details key="start" value="869"/>
+      <details key="end" value="912"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement/@body.1/@body.19/collect/@source">
+      <details key="start" value="869"/>
+      <details key="end" value="894"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/@body.1/@body.19/collect/@source/aPrimitiveComponent">
+      <details key="start" value="869"/>
+      <details key="end" value="888"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/@body.1/@body.19/collect/@body">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/@body.1/@body.19/collect/@body/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/@body.1/@body.19/collect/@body/@argument.0">
+      <details key="start" value="905"/>
+      <details key="end" value="911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/@body.1/@body.19/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/@body.1/@body.19/@each">
+      <details key="start" value="925"/>
+      <details key="end" value="929"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/@body.1/@body.20">
+      <details key="start" value="989"/>
+      <details key="end" value="1130"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/@body.1/@body.20/@body.0">
+      <details key="start" value="1073"/>
+      <details key="end" value="1094"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/@body.1/@body.20/@body.1">
+      <details key="start" value="1095"/>
+      <details key="end" value="1101"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/@body.1/@body.20/@body.1/p">
+      <details key="start" value="1095"/>
+      <details key="end" value="1096"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/@body.1/@body.20/@body.2">
+      <details key="start" value="1103"/>
+      <details key="end" value="1111"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/@body.1/@body.20/@body.3">
+      <details key="start" value="1112"/>
+      <details key="end" value="1118"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateElement/@body.1/@body.20/@body.3/p">
+      <details key="start" value="1112"/>
+      <details key="end" value="1113"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateElement/@body.1/@body.20/@body.4">
+      <details key="start" value="1120"/>
+      <details key="end" value="1123"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateElement/@body.1/@body.20/p">
+      <details key="start" value="995"/>
+      <details key="end" value="1006"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateElement/@body.1/@body.20/collect">
+      <details key="start" value="1009"/>
+      <details key="end" value="1053"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateElement/@body.1/@body.20/collect/@source">
+      <details key="start" value="1009"/>
+      <details key="end" value="1034"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateElement/@body.1/@body.20/collect/@source/aPrimitiveComponent">
+      <details key="start" value="1009"/>
+      <details key="end" value="1028"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateElement/@body.1/@body.20/collect/@body">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateElement/@body.1/@body.20/collect/@body/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateElement/@body.1/@body.20/collect/@body/@argument.0">
+      <details key="start" value="1045"/>
+      <details key="end" value="1052"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateElement/@body.1/@body.20/collect/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateElement/@body.1/@body.20/@each">
+      <details key="start" value="1066"/>
+      <details key="end" value="1070"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateElement/@body.1/@body.21">
+      <details key="start" value="1131"/>
+      <details key="end" value="3913"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateElement/@body.1/@body.22">
+      <details key="start" value="3914"/>
+      <details key="end" value="3938"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateElement/@body.1/@body.22/aPrimitiveComponent">
+      <details key="start" value="3914"/>
+      <details key="end" value="3933"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateElement/@body.1/@body.23">
+      <details key="start" value="3940"/>
+      <details key="end" value="3968"/>
+      <details key="line" value="129"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateElement/@body.1/@fileUrl">
+      <details key="start" value="173"/>
+      <details key="end" value="212"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateElement/@body.1/@fileUrl/@source">
+      <details key="start" value="173"/>
+      <details key="end" value="197"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateElement/@body.1/@fileUrl/@source/aPrimitiveComponent">
+      <details key="start" value="173"/>
+      <details key="end" value="192"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateElement/@body.1/@fileUrl/@argument.0">
+      <details key="start" value="205"/>
+      <details key="end" value="211"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateElement/@body.1/@charset">
+      <details key="start" value="221"/>
+      <details key="end" value="228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateElement/aPrimitiveComponent">
+      <details key="start" value="122"/>
+      <details key="end" value="162"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
